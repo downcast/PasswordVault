@@ -16,7 +16,6 @@ import com.appdomain.passwordvault.Model.ApplicationData;
 import com.appdomain.passwordvault.Model.Department;
 import com.appdomain.passwordvault.Model.Server;
 import com.appdomain.passwordvault.Model.Team;
-import com.appdomain.passwordvault.Model.User;
 import com.appdomain.passwordvault.R;
 
 import java.util.ArrayList;
@@ -65,7 +64,7 @@ public class FragmentServerAdd extends Fragment  implements View.OnClickListener
 				String user = mUser.getText().toString();
 
 				ApplicationData.getInstance().addServer(new Server(name, user, pass));
-				MainActivity.nextFragment(this, new FragmentAdminPanel(), null, false, false);
+				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 			case R.id.fragment_server_add_btn_add:
 				MainActivity.nextFragment(this, new FragmentAppAdd(), null, false, false);

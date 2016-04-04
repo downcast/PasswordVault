@@ -2,40 +2,34 @@ package com.appdomain.passwordvault.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.appdomain.passwordvault.Fragments.FragmentDepartment;
+import com.appdomain.passwordvault.Fragments.FragmentProfile;
 import com.appdomain.passwordvault.Fragments.FragmentServer;
-import com.appdomain.passwordvault.Fragments.FragmentTeam;
 import com.appdomain.passwordvault.Fragments.FragmentUser;
 
 /**
- * Created by Marcus on 3/7/2016.
+ * Created by Marcus on 4/4/2016.
  */
-public class AdapterFragment extends FragmentStatePagerAdapter {
+public class AdapterPanelAdminNon extends FragmentStatePagerAdapter {
 
-	public AdapterFragment(FragmentManager fm) {
+	public AdapterPanelAdminNon(FragmentManager fm) {
 		super(fm);
 	}
 
 	@Override
 	public int getCount() {
-		return 4;
+		return 2;
 	}
 
 	@Override
 	public Fragment getItem(int position) {
 
-		switch (position){
+		switch (position) {
 			case 0:
-				return new FragmentUser();
+				return new FragmentProfile();
 			case 1:
 				return new FragmentServer();
-			case 2:
-				return new FragmentDepartment();
-			case 3:
-				return new FragmentTeam();
 			default:
 				return new FragmentUser();
 		}
@@ -48,10 +42,6 @@ public class AdapterFragment extends FragmentStatePagerAdapter {
 				return "USERS";
 			case 1:
 				return "SERVERS";
-			case 2:
-				return "DEPARTMENTS";
-			case 3:
-				return "TEAMS";
 			default:
 				return "USERS";
 		}

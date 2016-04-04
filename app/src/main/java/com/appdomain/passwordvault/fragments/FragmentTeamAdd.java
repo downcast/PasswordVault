@@ -44,7 +44,7 @@ public class FragmentTeamAdd extends Fragment implements View.OnClickListener{
 				String name = mName.getText().toString();
 
 				ApplicationData.getInstance().addTeam(new Team(name, null, null, null));
-				MainActivity.nextFragment(this, new FragmentAdminPanel(), null, false, false);
+				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 		}
 	}

@@ -9,16 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.appdomain.passwordvault.MainActivity;
-import com.appdomain.passwordvault.Model.ApplicationData;
-import com.appdomain.passwordvault.Model.Department;
 import com.appdomain.passwordvault.R;
 
 /**
  * Created by Marcus on 4/4/2016.
  */
-public class FragmentDepartmentAdd extends Fragment implements View.OnClickListener {
+public class FragmentLogin extends Fragment implements View.OnClickListener {
 
-	private EditText mName;
+	private EditText mUsername;
+	private EditText mPassword;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -27,11 +26,12 @@ public class FragmentDepartmentAdd extends Fragment implements View.OnClickListe
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View root = inflater.inflate(R.layout.fragment_department_add, container, false);
+		View root = inflater.inflate(R.layout.fragment_login, container, false);
 
-		mName = (EditText) root.findViewById(R.id.fragment_department_add_name_edit);
+		mUsername = (EditText) root.findViewById(R.id.fragment_login_username_edit);
+		mPassword = (EditText) root.findViewById(R.id.fragment_login_password_edit);
+		Button btn = (Button) root.findViewById(R.id.fragment_login_btn);
 
-		Button btn = (Button) root.findViewById(R.id.fragment_department_add_btn);
 		btn.setOnClickListener(this);
 		return root;
 	}
@@ -39,12 +39,11 @@ public class FragmentDepartmentAdd extends Fragment implements View.OnClickListe
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
-			case R.id.fragment_department_add_btn:
-
-				String name = mName.getText().toString();
-
-				ApplicationData.getInstance().addDepartment(new Department(name, null, null));
-				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
+			case R.id.fragment_login_btn:
+				if (mUsername.getText().toString().equals("Admin"))
+					MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
+				else
+					MainActivity.nextFragment(this, new FragmentPanelAdminNon(), null, false, false);
 				break;
 		}
 	}

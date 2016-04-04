@@ -53,7 +53,7 @@ public class FragmentUserAdd extends Fragment implements View.OnClickListener{
 				String user = mUser.getText().toString();
 
 				ApplicationData.getInstance().addUser(new User(fName, lName, user, pass));
-				MainActivity.nextFragment(this, new FragmentAdminPanel(), null, false, false);
+				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 		}
 	}
