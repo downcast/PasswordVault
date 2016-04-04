@@ -1,5 +1,29 @@
 <resources>
     <string name="app_name">PasswordVault</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Headers -->
+    <!-- Headers User -->
+    <string name="header_users_heading1">UserName</string>
+    <string name="header_users_heading2">Last Name</string>
+    <!-- Headers User-->
+
+    <!-- Headers Server -->
+    <string name="header_servers_heading1">Name</string>
+    <string name="header_servers_heading2">Department</string>
+    <!-- Headers Server-->
+
+    <!-- Headers Departments -->
+    <string name="header_depts_heading1">Name</string>
+    <string name="header_depts_heading2">Administrator</string>
+    <!-- Headers Departments-->
+
+    <!-- Headers Teams -->
+    <string name="header_teams_heading1">Name</string>
+    <string name="header_teams_heading2">Members</string>
+    <!-- Headers Teams-->
+    <!-- Headers -->
+
+    <string name="fragment_user_add_title">Create User</string>
+    <string name="fragment_user_add_firstname">First Name</string>
 </resources>

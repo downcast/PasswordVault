@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/fragment_server_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Create Server"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/fragment_server_add_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fragment_server_add_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Name"/>
+
+        <EditText
+            android:id="@+id/fragment_server_add_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fragment_server_add_name_view"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_server_add_username_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fragment_server_add_name_view"
+            android:layout_below="@+id/fragment_server_add_name_edit"
+            android:layout_marginTop="20dp"
+            android:text="UserName"/>
+
+        <EditText
+            android:id="@+id/fragment_server_add_username_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/fragment_server_add_name_edit"
+            android:layout_alignStart="@+id/fragment_server_add_name_edit"
+            android:layout_below="@+id/fragment_server_add_username_view"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_server_add_password_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fragment_server_add_username_view"
+            android:layout_below="@+id/fragment_server_add_username_edit"
+            android:layout_marginTop="20dp"
+            android:text="Password"/>
+
+        <EditText
+            android:id="@+id/fragment_server_add_password_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/fragment_server_add_username_edit"
+            android:layout_alignStart="@+id/fragment_server_add_username_edit"
+            android:layout_below="@+id/fragment_server_add_password_view"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_server_add_depart_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fragment_server_add_password_view"
+            android:layout_below="@+id/fragment_server_add_password_edit"
+            android:layout_marginTop="20dp"
+            android:text="Department"/>
+
+        <Spinner
+            android:id="@+id/fragment_server_add_depart_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/fragment_server_add_password_edit"
+            android:layout_alignStart="@+id/fragment_server_add_password_edit"
+            android:layout_below="@+id/fragment_server_add_depart_view"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"/>
+
+        <TextView
+            android:id="@+id/fragment_server_add_team_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fragment_server_add_depart_view"
+            android:layout_below="@+id/fragment_server_add_depart_spinner"
+            android:layout_marginTop="20dp"
+            android:text="Team"/>
+
+        <Spinner
+            android:id="@+id/fragment_server_add_team_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/fragment_server_add_depart_spinner"
+            android:layout_alignStart="@+id/fragment_server_add_depart_spinner"
+            android:layout_below="@+id/fragment_server_add_team_view"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Application"
+            android:id="@+id/fragment_server_add_app_view"
+            android:layout_below="@+id/fragment_server_add_team_spinner"
+            android:layout_alignStart="@+id/fragment_server_add_team_view"
+            android:layout_marginTop="20dp"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_server_add_app_list"
+            android:layout_below="@+id/fragment_server_add_app_view"
+            android:layout_alignStart="@+id/fragment_server_add_team_spinner"
+            android:layout_alignEnd="@+id/fragment_server_add_team_spinner"
+            android:choiceMode="singleChoice"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/fragment_server_add_btn_create"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/fragment_server_add_app_list"
+            android:layout_alignEnd="@+id/fragment_server_add_app_list"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add App"
+            android:id="@+id/fragment_server_add_btn_add"
+            android:layout_alignStart="@+id/fragment_server_add_app_list"
+            android:layout_alignTop="@+id/fragment_server_add_btn_create"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</ScrollView>
