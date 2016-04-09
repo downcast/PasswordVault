@@ -9,10 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.appdomain.passwordvault.Fragments.FragmentLogin;
+import com.firebase.client.Firebase;
 
 public class MainActivity extends AppCompatActivity {
 
 	public static FragmentManager sFragmentManager;
+	public static Firebase sFirebaseRef;
 
 	/**
 	 * Commits replacement transactions with fragments.
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+	    Firebase.setAndroidContext(this);
+	    sFirebaseRef = new Firebase("https://swepasswordvault.firebaseio.com//");
 
 	    sFragmentManager = getSupportFragmentManager();
 
