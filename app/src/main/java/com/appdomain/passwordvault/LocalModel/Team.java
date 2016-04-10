@@ -1,4 +1,4 @@
-package com.appdomain.passwordvault.Model;
+package com.appdomain.passwordvault.LocalModel;
 
 import java.util.ArrayList;
 
@@ -6,6 +6,8 @@ import java.util.ArrayList;
  * Created by Marcus on 4/3/2016.
  */
 public class Team {
+
+	private String mID;
 	private String mName;
 	private ArrayList<User> mUsers;
 	private ArrayList<Server> mServers;
@@ -19,10 +21,12 @@ public class Team {
 	}
 
 	//region setters
+	public void setID(String mID) { this.mID = mID; }
 	public void setName(String mName) { this.mName = mName; }
 	//endregion
 
 	//region getters
+	public String getID() { return mID; }
 	public String getName() { return mName; }
 	//endregion
 }

@@ -2,21 +2,18 @@ package com.appdomain.passwordvault.Adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.appdomain.passwordvault.Fragments.FragmentAppAdd;
 import com.appdomain.passwordvault.Fragments.FragmentDepartment;
 import com.appdomain.passwordvault.Fragments.FragmentServer;
 import com.appdomain.passwordvault.Fragments.FragmentServerAdd;
 import com.appdomain.passwordvault.Fragments.FragmentTeam;
 import com.appdomain.passwordvault.Fragments.FragmentUser;
-import com.appdomain.passwordvault.Fragments.FragmentUserAdd;
-import com.appdomain.passwordvault.Model.ApplicationData;
+import com.appdomain.passwordvault.LocalModel.ApplicationData;
 import com.appdomain.passwordvault.R;
 
 /** Since all of the fragments share a common view with a title and listview, they will all share an adapter to that listview

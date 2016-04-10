@@ -1,12 +1,11 @@
-package com.appdomain.passwordvault.Model;
-
-import java.util.ArrayList;
+package com.appdomain.passwordvault.LocalModel;
 
 /**
  * Created by Marcus on 4/3/2016.
  */
 public class App {
 
+	private String mID;
 	private String mName;
 	private String mNameUser;
 	private String mPassword;
@@ -20,6 +19,7 @@ public class App {
 	}
 
 	//region setters
+	public void setID(String mID) { this.mID = mID; }
 	public void setName(String mName) { this.mName = mName; }
 	public void setNameUser(String mNameUser) { this.mNameUser = mNameUser; }
 	public void setPassword(String mPassword) { this.mPassword = mPassword; }
@@ -27,6 +27,7 @@ public class App {
 	//endregion
 
 	//region getters
+	public String getID() { return mID; }
 	public String getName() { return mName; }
 	public String getNameUser() { return mNameUser; }
 	public String getPassword() { return mPassword; }

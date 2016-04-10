@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.appdomain.passwordvault.LocalModel.ApplicationData;
+import com.appdomain.passwordvault.LocalModel.User;
 import com.appdomain.passwordvault.MainActivity;
-import com.appdomain.passwordvault.Model.ApplicationData;
-import com.appdomain.passwordvault.Model.User;
 import com.appdomain.passwordvault.R;
 
 /**

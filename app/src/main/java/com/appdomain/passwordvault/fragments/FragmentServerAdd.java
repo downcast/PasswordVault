@@ -10,12 +10,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.appdomain.passwordvault.Adapters.AdapterListView;
+import com.appdomain.passwordvault.LocalModel.App;
+import com.appdomain.passwordvault.LocalModel.ApplicationData;
+import com.appdomain.passwordvault.LocalModel.Department;
+import com.appdomain.passwordvault.LocalModel.Server;
+import com.appdomain.passwordvault.LocalModel.Team;
 import com.appdomain.passwordvault.MainActivity;
-import com.appdomain.passwordvault.Model.App;
-import com.appdomain.passwordvault.Model.ApplicationData;
-import com.appdomain.passwordvault.Model.Department;
-import com.appdomain.passwordvault.Model.Server;
-import com.appdomain.passwordvault.Model.Team;
 import com.appdomain.passwordvault.R;
 
 import java.util.ArrayList;

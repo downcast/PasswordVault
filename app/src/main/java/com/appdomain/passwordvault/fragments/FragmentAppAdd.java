@@ -9,10 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.appdomain.passwordvault.LocalModel.App;
+import com.appdomain.passwordvault.LocalModel.ApplicationData;
 import com.appdomain.passwordvault.MainActivity;
-import com.appdomain.passwordvault.Model.App;
-import com.appdomain.passwordvault.Model.ApplicationData;
-import com.appdomain.passwordvault.Model.User;
 import com.appdomain.passwordvault.R;
 
 /**

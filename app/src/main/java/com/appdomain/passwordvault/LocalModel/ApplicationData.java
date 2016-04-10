@@ -1,4 +1,8 @@
-package com.appdomain.passwordvault.Model;
+package com.appdomain.passwordvault.LocalModel;
+
+import android.util.Log;
+
+import com.firebase.client.DataSnapshot;
 
 import java.util.ArrayList;
 
@@ -50,4 +54,16 @@ public class ApplicationData {
 	public ArrayList<Department> getAllDepartments() { return this.mDepts; }
 	public ArrayList<Team> getAllTeams() { return this.mTeams; }
 	public ArrayList<App> getAllApps() { return this.mApps; }
+
+	public void loadDBData(DataSnapshot dataSnapshot){
+
+		User tempUser = new User();
+		for (DataSnapshot ds : dataSnapshot.getChildren()) {
+			try {
+				mUsers.add(tempUser.resolveDBUser(ds.getKey(), ds.getValue(com.appdomain.passwordvault.DBModel.User.class)));
+				Log.d("Moneky", "Added");
+			} catch (Exception e) { e.printStackTrace(); }
+		}
+		Log.d("Moneky", "Done");
+	}
 }
