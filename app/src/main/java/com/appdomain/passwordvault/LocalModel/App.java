@@ -11,6 +11,8 @@ public class App {
 	private String mPassword;
 	private Server mServer;
 
+	public App() {}
+
 	public App(String name, String userName, String password, Server server){
 		this.mName = name;
 		this.mNameUser = userName;

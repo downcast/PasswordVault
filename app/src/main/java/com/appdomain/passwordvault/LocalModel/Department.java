@@ -12,6 +12,8 @@ public class Department {
 	private ArrayList<User> mUsers;
 	private ArrayList<Server> mServers;
 
+	public Department() {}
+
 	public Department(String name, ArrayList<User> users, ArrayList<Server> servers){
 		this.mName = name;
 		this.mUsers = users;

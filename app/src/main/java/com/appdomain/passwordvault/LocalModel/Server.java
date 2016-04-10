@@ -15,6 +15,8 @@ public class Server {
 	private ArrayList<Team> mTeam;
 	private ArrayList<App> mApp;
 
+	public Server() {}
+
 	public Server(String name, String userName, String password){
 		mName = name;
 		mNameUser = userName;

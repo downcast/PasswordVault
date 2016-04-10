@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.appdomain.passwordvault.Fragments.FragmentLogin;
 import com.appdomain.passwordvault.Listeners.onDataReceived;
+import com.appdomain.passwordvault.LocalModel.ApplicationData;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements ValueEventListene
 	//region event listeners
 	@Override
 	public void onDataChange(DataSnapshot dataSnapshot) {
-		//ApplicationData.getInstance().loadDBData(dataSnapshot);
+		ApplicationData.getInstance().loadDBData(dataSnapshot);
 	}
 
 	@Override

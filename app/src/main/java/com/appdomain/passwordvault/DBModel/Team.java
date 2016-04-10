@@ -20,15 +20,15 @@ public class Team {
 
 	//region setters
 	public void setName(String mName) { this.Name = mName; }
-	public void setDepartments(String departments) { Departments = departments; }
-	public void setServers(String servers) { Servers = servers; }
-	public void setUsers(String users) { Users = users; }
+	public void setDepartment(String departments) { Departments = departments; }
+	public void setServer(String servers) { Servers = servers; }
+	public void setUser(String users) { Users = users; }
 	//endregion
 
 	//region getters
 	public String getName() { return Name; }
-	public String getDepartments() { return Departments; }
-	public String getServers() { return Servers; }
-	public String getUsers() { return Users; }
+	public String getDepartment() { return Departments; }
+	public String getServer() { return Servers; }
+	public String getUser() { return Users; }
 	//endregion
 }

@@ -34,6 +34,13 @@ public class ApplicationData {
 		mServers = new ArrayList<>();
 		mTeams = new ArrayList<>();
 		mApps = new ArrayList<>();
+
+		mDBUserMap = new HashMap<>();
+		mDBDepartmentMap = new HashMap<>();
+		mDBServerMap = new HashMap<>();
+		mDBTeamMap = new HashMap<>();
+		mDBAppMap = new HashMap<>();
+		mDBCredentialMap = new HashMap<>();
 	}
 
 	public static ApplicationData getInstance() {
@@ -44,7 +51,6 @@ public class ApplicationData {
 			return sInstance;
 		}
 	}
-
 
 	public void addUser(User obj){ this.mUsers.add(obj); }
 	public void addServer(Server obj){ this.mServers.add(obj); }
@@ -65,25 +71,67 @@ public class ApplicationData {
 	public ArrayList<Department> getAllDepartments() { return this.mDepts; }
 	public ArrayList<Team> getAllTeams() { return this.mTeams; }
 	public ArrayList<App> getAllApps() { return this.mApps; }
-	public ArrayList<Credential> getAllCredentials() { return this.mCredentials; }
+	public ArrayList<Credential> getAllCredential() { return this.mCredentials; }
 
 	public void loadDBData(DataSnapshot dataSnapshot){
 
+		// Get Data
 		for (DataSnapshot ds : dataSnapshot.getChildren()) {    // Goes gown to the ID level
 			for (DataSnapshot ddss : ds.getChildren()) {        // Goes to the object level
 				try {
-					mUsers.add(new User().resolveDBUser(ddss.getKey(), ddss.getValue(com.appdomain.passwordvault.DBModel.User.class)));
-					Log.d("Firebase", "Getting User data for the first time");
+					mDBAppMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.App.class));
+					Log.d("Firebase", "Getting App data for the first time");
 				} catch (Exception e) {
 					try {
-						mCredentials.add(new Credential().resolveDBCredential(ddss.getKey(), ddss.getValue(com.appdomain.passwordvault.DBModel.Credential.class)));
+						mDBCredentialMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.Credential.class));
 						Log.d("Firebase", "Getting credential data for the first time");
 					} catch (Exception e1) {
-
+						try {
+							mDBDepartmentMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.Department.class));
+							Log.d("Firebase", "Getting department data for the first time");
+						} catch (Exception e2) {
+							try {
+								mDBServerMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.Server.class));
+								Log.d("Firebase", "Getting server data for the first time");
+							} catch (Exception e3) {
+								try {
+									mDBTeamMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.Team.class));
+									Log.d("Firebase", "Getting team data for the first time");
+								} catch (Exception e4) {
+									try {
+										mDBUserMap.put(ddss.getKey(),ddss.getValue(com.appdomain.passwordvault.DBModel.User.class));
+										Log.d("Firebase", "Getting user data for the first time");
+									} catch (Exception e5) {
+										e5.printStackTrace();
+									}
+								}
+							}
+						}
 					}
 				}
 
 			}
 		}
+
+		// Parse data
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.App> entry : mDBAppMap.entrySet()){
+			//mApps.add(new App().resolveDBApp(entry.getKey(), entry.getValue()));
+		}
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Credential> entry : mDBCredentialMap.entrySet()){
+			//mCredentials.add(new Credential().resolveDBCredential(entry.getKey(), entry.getValue()));
+		}
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Department> entry : mDBDepartmentMap.entrySet()){
+			//mDepts.add(new Department().resolveDBDepartment(entry.getKey(), entry.getValue()));
+		}
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Server> entry : mDBServerMap.entrySet()){
+			//mServers.add(new Server().resolveDBServer(entry.getKey(), entry.getValue()));
+		}
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Team> entry : mDBTeamMap.entrySet()){
+			//mTeams.add(new Team().resolveDBTeam(entry.getKey(), entry.getValue()));
+		}
+		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.User> entry : mDBUserMap.entrySet()){
+			//mUsers.add(new User().resolveDBUser(entry.getKey(), entry.getValue()));
+		}
+
 	}
 }

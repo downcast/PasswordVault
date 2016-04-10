@@ -13,9 +13,12 @@ public class Server {
 
 	public Server() {}
 
-	public Server(String name, String credential){
-		Name = name;
+	public Server(String app, String credential, String department, String name, String team) {
+		App = app;
 		Credential = credential;
+		Department = department;
+		Name = name;
+		Team = team;
 	}
 
 	//region Setters
@@ -29,10 +32,8 @@ public class Server {
 	//region Getters
 	public String getName() { return Name; }
 	public String getCredential() { return Credential; }
-	public String getDepartments() { return Department; }
 	public String getApp() { return App; }
 	public String getDepartment() { return Department; }
 	public String getTeam() { return Team; }
-	public String getTeams() { return Team; }
 	//endregion
 }

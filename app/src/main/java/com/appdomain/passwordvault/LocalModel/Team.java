@@ -13,6 +13,8 @@ public class Team {
 	private ArrayList<Server> mServers;
 	private ArrayList<Department> mDepartments;
 
+	public Team() {}
+
 	public Team(String name, ArrayList<User> users, ArrayList<Server> servers, ArrayList<Department> department){
 		this.mName = name;
 		this.mUsers = users;
