@@ -5,26 +5,26 @@ package com.appdomain.passwordvault.DBModel;
  */
 public class User {
 
-	private String FirstName;
-	private String LastName;
+	private String NameFirst;
+	private String NameLast;
 	private String Credential;
 	private String Department;
 	private String Team;
 
 	public User(){}
 
-	public User(String firstName, String lastName, String credential, String department, String team){
-		FirstName = firstName;
-		LastName = lastName;
+	public User(String NameFirst, String NameLast, String credential, String department, String team){
+		this.NameFirst = NameFirst;
+		this.NameLast = NameLast;
 		Credential = credential;
 		Department = department;
 		Team = team;
 	}
 
 	//region Setters
-	public void setNameFirst(String nameFirst) { this.FirstName = nameFirst; }
+	public void setNameFirst(String nameFirst) { this.NameFirst = nameFirst; }
 
-	public void setNameLast(String nameLast) { this.LastName = nameLast; }
+	public void setNameLast(String nameLast) { this.NameLast = nameLast; }
 
 	public void setCredential(String credential) { this.Credential = credential; }
 
@@ -34,9 +34,9 @@ public class User {
 	//endregion
 
 	//region Getters
-	public String getNameFirst() { return FirstName; }
+	public String getNameFirst() { return NameFirst; }
 
-	public String getNameLast() { return LastName; }
+	public String getNameLast() { return NameLast; }
 
 	public String getCredential() { return Credential; }
 

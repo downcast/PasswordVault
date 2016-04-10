@@ -10,7 +10,6 @@ import android.view.View;
 
 import com.appdomain.passwordvault.Fragments.FragmentLogin;
 import com.appdomain.passwordvault.Listeners.onDataReceived;
-import com.appdomain.passwordvault.LocalModel.ApplicationData;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements ValueEventListene
         setContentView(R.layout.activity_main);
 
 	    Firebase.setAndroidContext(this);
-	    sFirebaseRef = new Firebase("https://swepasswordvault.firebaseio.com/User");
+	    sFirebaseRef = new Firebase("https://swepasswordvault.firebaseio.com/");
 	    sFirebaseRef.addValueEventListener(this);
 
 	    sFragmentManager = getSupportFragmentManager();
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements ValueEventListene
 	//region event listeners
 	@Override
 	public void onDataChange(DataSnapshot dataSnapshot) {
-		ApplicationData.getInstance().loadDBData(dataSnapshot);
+		//ApplicationData.getInstance().loadDBData(dataSnapshot);
 	}
 
 	@Override
