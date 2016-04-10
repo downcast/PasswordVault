@@ -5,6 +5,7 @@ import android.util.Log;
 import com.firebase.client.DataSnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Marcus on 4/3/2016.
@@ -19,6 +20,13 @@ public class ApplicationData {
 	private ArrayList<Team> mTeams;
 	private ArrayList<App> mApps;
 	private ArrayList<Credential> mCredentials;
+
+	private HashMap<String, com.appdomain.passwordvault.DBModel.User> mDBUserMap;
+	private HashMap<String, com.appdomain.passwordvault.DBModel.Department> mDBDepartmentMap;
+	private HashMap<String, com.appdomain.passwordvault.DBModel.Server> mDBServerMap;
+	private HashMap<String, com.appdomain.passwordvault.DBModel.Team> mDBTeamMap;
+	private HashMap<String, com.appdomain.passwordvault.DBModel.App> mDBAppMap;
+	private HashMap<String, com.appdomain.passwordvault.DBModel.Credential> mDBCredentialMap;
 
 	private ApplicationData() {
 		mUsers = new ArrayList<>();
