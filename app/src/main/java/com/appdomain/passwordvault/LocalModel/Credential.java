@@ -26,12 +26,19 @@ public class Credential {
 	//endregion
 
 	//region Getters
+	public String getmID() {
+		return mID;
+	}
 	public String getAdmin() { return mAdmin; }
 	public String getPassword() { return mPassword; }
 	public String getUsername() { return mUsername; }
 	//endregion
 
 	public Credential resolveDBCredential(String id, com.appdomain.passwordvault.DBModel.Credential credential) {
+		this.mID = id;
+		this.mAdmin = credential.getAdmin();
+		this.mPassword = credential.getPassword();
+		this.mUsername = credential.getUsername();
 
 		return this;
 	}

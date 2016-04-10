@@ -63,7 +63,7 @@ public class FragmentServerAdd extends Fragment  implements View.OnClickListener
 				String pass = mPass.getText().toString();
 				String user = mUser.getText().toString();
 
-				ApplicationData.getInstance().addServer(new Server(name, user, pass));
+				ApplicationData.getInstance().addServer(new Server(name, user));
 				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 			case R.id.fragment_server_add_btn_add:

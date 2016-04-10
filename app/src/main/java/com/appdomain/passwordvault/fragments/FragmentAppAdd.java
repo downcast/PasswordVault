@@ -52,7 +52,7 @@ public class FragmentAppAdd extends Fragment implements View.OnClickListener{
 				String pass = mPass.getText().toString();
 				String user = mUser.getText().toString();
 
-				ApplicationData.getInstance().addApp(new App(name, user, pass, null));
+				ApplicationData.getInstance().addApp(new App(name, user, pass));
 				MainActivity.nextFragment(this, new FragmentServerAdd(), null, false, false);
 				break;
 		}

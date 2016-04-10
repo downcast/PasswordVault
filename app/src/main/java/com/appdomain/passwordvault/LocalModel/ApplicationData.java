@@ -115,23 +115,22 @@ public class ApplicationData {
 
 		// Parse data
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.App> entry : mDBAppMap.entrySet()){
-			//mApps.add(new App().resolveDBApp(entry.getKey(), entry.getValue()));
+			mApps.add(new App().resolveDBApp(entry.getKey(), entry.getValue()));
 		}
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Credential> entry : mDBCredentialMap.entrySet()){
-			//mCredentials.add(new Credential().resolveDBCredential(entry.getKey(), entry.getValue()));
+			mCredentials.add(new Credential().resolveDBCredential(entry.getKey(), entry.getValue()));
 		}
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Department> entry : mDBDepartmentMap.entrySet()){
-			//mDepts.add(new Department().resolveDBDepartment(entry.getKey(), entry.getValue()));
+			mDepts.add(new Department().resolveDBDepartment(entry.getKey(), entry.getValue()));
 		}
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Server> entry : mDBServerMap.entrySet()){
-			//mServers.add(new Server().resolveDBServer(entry.getKey(), entry.getValue()));
+			mServers.add(new Server().resolveDBServer(entry.getKey(), entry.getValue()));
 		}
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.Team> entry : mDBTeamMap.entrySet()){
-			//mTeams.add(new Team().resolveDBTeam(entry.getKey(), entry.getValue()));
+			mTeams.add(new Team().resolveDBTeam(entry.getKey(), entry.getValue()));
 		}
 		for (HashMap.Entry<String, com.appdomain.passwordvault.DBModel.User> entry : mDBUserMap.entrySet()){
-			//mUsers.add(new User().resolveDBUser(entry.getKey(), entry.getValue()));
+			mUsers.add(new User().resolveDBUser(entry.getKey(), entry.getValue()));
 		}
-
 	}
 }

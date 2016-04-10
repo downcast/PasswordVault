@@ -7,32 +7,36 @@ public class App {
 
 	private String mID;
 	private String mName;
-	private String mNameUser;
-	private String mPassword;
-	private Server mServer;
+	private String mCredential;
+	private String mServer;
 
-	public App() {}
+	public App(){}
 
-	public App(String name, String userName, String password, Server server){
+	public App(String name, String credential, String server){
 		this.mName = name;
-		this.mNameUser = userName;
-		this.mPassword = password;
+		this.mCredential = credential;
 		this.mServer = server;
 	}
 
 	//region setters
 	public void setID(String mID) { this.mID = mID; }
 	public void setName(String mName) { this.mName = mName; }
-	public void setNameUser(String mNameUser) { this.mNameUser = mNameUser; }
-	public void setPassword(String mPassword) { this.mPassword = mPassword; }
-	public void setServer(Server mServer) { this.mServer = mServer; }
+	public void setNameUser(String mCredential) { this.mCredential = mCredential; }
+	public void setServer(String mServer) { this.mServer = mServer; }
 	//endregion
 
 	//region getters
 	public String getID() { return mID; }
 	public String getName() { return mName; }
-	public String getNameUser() { return mNameUser; }
-	public String getPassword() { return mPassword; }
-	public Server getServer() { return mServer; }
+	public String getNameUser() { return mCredential; }
+	public String getServer() { return mServer; }
 	//endregion
+
+	public App resolveDBApp(String id, com.appdomain.passwordvault.DBModel.App app) {
+		this.mID = id;
+		this.mName = app.getName();
+		this.mServer = app.getServer();
+		this.mCredential = app.getCredential();
+		return this;
+	}
 }

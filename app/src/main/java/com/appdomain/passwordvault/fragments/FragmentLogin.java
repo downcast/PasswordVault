@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.appdomain.passwordvault.LocalModel.ApplicationData;
-import com.appdomain.passwordvault.MainActivity;
 import com.appdomain.passwordvault.R;
 
 /**
@@ -41,11 +39,12 @@ public class FragmentLogin extends Fragment implements View.OnClickListener{
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.fragment_login_btn:
-
-				if (mUsername.getText().toString().equals(ApplicationData.getInstance().getUser(0).getNameUser()))
+				//MainActivity.addDBData("Team", new Team("User namj", "Padksjf", "sjkfdhbs", "sdjfkb"));
+				/*if (mUsername.getText().toString().equals(ApplicationData.getInstance().getUser(0).getNameUser()))
 					MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				else
 					MainActivity.nextFragment(this, new FragmentPanelAdminNon(), null, false, false);
+					*/
 				break;
 		}
 	}
