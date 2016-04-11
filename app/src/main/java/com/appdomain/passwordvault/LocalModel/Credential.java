@@ -26,7 +26,7 @@ public class Credential {
 	//endregion
 
 	//region Getters
-	public String getmID() {
+	public String getID() {
 		return mID;
 	}
 	public String getAdmin() { return mAdmin; }
@@ -39,7 +39,6 @@ public class Credential {
 		this.mAdmin = credential.getAdmin();
 		this.mPassword = credential.getPassword();
 		this.mUsername = credential.getUsername();
-
 		return this;
 	}
 }

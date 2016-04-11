@@ -12,12 +12,13 @@ public class User {
 	private String mDepartment;
 	private String mTeam;
 
-	public User() {
-	}
+	public User() { }
 
-	public User(String firstName, String lastName, String Credential) {
+	public User(String firstName, String lastName, String Credential, String department, String team) {
 		mNameFirst = firstName;
 		mNameLast = lastName;
+		mTeam = team;
+		mDepartment = department;
 		mCredential = Credential;
 	}
 

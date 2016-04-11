@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.appdomain.passwordvault.LocalModel.ApplicationData;
-import com.appdomain.passwordvault.LocalModel.Department;
-import com.appdomain.passwordvault.MainActivity;
 import com.appdomain.passwordvault.R;
 
 /**
@@ -43,8 +40,8 @@ public class FragmentDepartmentAdd extends Fragment implements View.OnClickListe
 
 				String name = mName.getText().toString();
 
-				ApplicationData.getInstance().addDepartment(new Department(name, null, null));
-				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
+				//ApplicationData.getInstance().addDepartment(new Department(name, null, null));
+				//MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 		}
 	}

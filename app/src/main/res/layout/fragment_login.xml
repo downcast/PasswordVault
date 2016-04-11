@@ -33,7 +33,8 @@
         android:layout_below="@+id/fragment_login_username_view"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="super fly"/>
 
     <TextView
         android:id="@+id/fragment_login_password_view"
@@ -52,7 +53,8 @@
         android:layout_alignStart="@+id/fragment_login_username_edit"
         android:layout_below="@+id/fragment_login_password_view"
         android:layout_marginTop="10dp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:text="admins rule"/>
 
     <Button
         android:id="@+id/fragment_login_btn"

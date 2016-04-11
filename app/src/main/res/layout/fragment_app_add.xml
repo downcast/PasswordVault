@@ -74,33 +74,14 @@
             android:layout_below="@+id/fragment_app_add_password_view"
             android:layout_marginTop="10dp"/>
 
-        <TextView
-            android:id="@+id/fragment_app_add_server_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/fragment_app_add_password_view"
-            android:layout_below="@+id/fragment_app_add_password_edit"
-            android:layout_marginTop="20dp"
-            android:text="Server"/>
-
-        <Spinner
-            android:id="@+id/fragment_app_add_server_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/fragment_app_add_password_edit"
-            android:layout_alignStart="@+id/fragment_app_add_password_edit"
-            android:layout_below="@+id/fragment_app_add_server_view"
-            android:layout_marginTop="10dp"
-            android:spinnerMode="dropdown"/>
-
         <Button
             android:id="@+id/fragment_app_add_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fragment_app_add_server_spinner"
-            android:layout_alignEnd="@+id/fragment_app_add_server_spinner"
             android:layout_alignParentBottom="true"
             android:text="Create"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/fragment_app_add_password_edit"
+            android:layout_below="@+id/fragment_app_add_password_edit"/>
     </RelativeLayout>
 </ScrollView>

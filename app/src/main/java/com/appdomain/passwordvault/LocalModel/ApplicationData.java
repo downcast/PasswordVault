@@ -14,6 +14,8 @@ public class ApplicationData {
 
 	private static ApplicationData sInstance = null;
 
+	private User mCurrentUser;
+
 	private ArrayList<User> mUsers;
 	private ArrayList<Department> mDepts;
 	private ArrayList<Server> mServers;
@@ -34,6 +36,7 @@ public class ApplicationData {
 		mServers = new ArrayList<>();
 		mTeams = new ArrayList<>();
 		mApps = new ArrayList<>();
+		mCredentials = new ArrayList<>();
 
 		mDBUserMap = new HashMap<>();
 		mDBDepartmentMap = new HashMap<>();
@@ -52,6 +55,8 @@ public class ApplicationData {
 		}
 	}
 
+	public void setCurrentUser(User user){ this.mCurrentUser = user; }
+
 	public void addUser(User obj){ this.mUsers.add(obj); }
 	public void addServer(Server obj){ this.mServers.add(obj); }
 	public void addDepartment(Department obj){ this.mDepts.add(obj); }
@@ -65,6 +70,8 @@ public class ApplicationData {
 	public Team getTeam(int i) { return this.mTeams.get(i); }
 	public App getApp(int i) { return this.mApps.get(i); }
 	public Credential getCredential(int i) { return this.mCredentials.get(i); }
+
+	public User getCurrentUser() { return this.mCurrentUser; }
 
 	public ArrayList<User> getAllUsers() { return this.mUsers; }
 	public ArrayList<Server> getAllServers() { return this.mServers; }

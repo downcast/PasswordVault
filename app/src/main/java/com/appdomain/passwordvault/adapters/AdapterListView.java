@@ -37,7 +37,7 @@ public class AdapterListView extends BaseAdapter{
 		} else if (mfrag instanceof FragmentServer){
 			return ApplicationData.getInstance().getAllServers().size();
 		} else if (mfrag instanceof FragmentServerAdd){
-			return ApplicationData.getInstance().getAllApps().size();
+			return FragmentServerAdd.addedApps.size();
 		} else if (mfrag instanceof FragmentDepartment){
 			return ApplicationData.getInstance().getAllDepartments().size();
 		} else if (mfrag instanceof FragmentTeam){
@@ -77,16 +77,16 @@ public class AdapterListView extends BaseAdapter{
 		TextView smallItem = (TextView) row.findViewById(R.id.single_row_two_item_small);
 
 		if (mfrag instanceof FragmentUser){
-			//largeItem.setText(ApplicationData.getInstance().getUser(i).getNameUser());
-			//smallItem.setText(ApplicationData.getInstance().getUser(i).getNameLast());
+			largeItem.setText(ApplicationData.getInstance().getUser(i).getNameFirst());
+			smallItem.setText(ApplicationData.getInstance().getUser(i).getNameLast());
 
 		} else if (mfrag instanceof FragmentServer){
-			//largeItem.setText(ApplicationData.getInstance().getServer(i).getNameUser());
-			//smallItem.setText(ApplicationData.getInstance().getServer(i).get());
+			largeItem.setText(ApplicationData.getInstance().getServer(i).getName());
+			smallItem.setText(ApplicationData.getInstance().getServer(i).getDepartment());
 
 		} else if (mfrag instanceof FragmentServerAdd){
-			largeItem.setText(ApplicationData.getInstance().getApp(i).getName());
-			//smallItem.setText(ApplicationData.getInstance().getApp(i).getServer().getName());
+			largeItem.setText(FragmentServerAdd.addedApps.get(i).getName());
+			smallItem.setText("");
 
 		} else if (mfrag instanceof FragmentDepartment){
 			largeItem.setText(ApplicationData.getInstance().getDepartment(i).getName());

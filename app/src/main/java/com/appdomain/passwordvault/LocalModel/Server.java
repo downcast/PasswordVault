@@ -14,9 +14,13 @@ public class Server {
 
 	public Server(){}
 
-	public Server(String name, String credential){
-		mName = name;
-		mCredential = credential;
+	public Server(String mApp, String mCredential, String mDepartment, String mID, String mName, String mTeam) {
+		this.mApp = mApp;
+		this.mCredential = mCredential;
+		this.mDepartment = mDepartment;
+		this.mID = mID;
+		this.mName = mName;
+		this.mTeam = mTeam;
 	}
 
 	//region Setters
@@ -34,8 +38,8 @@ public class Server {
 	public String getID() { return mID; }
 	public String getName() { return mName; }
 	public String getCredential() { return mCredential; }
-	public String getAllDepartments() { return mDepartment; }
-	public String getAllTeams() { return mTeam; }
+	public String getDepartment() { return mDepartment; }
+	public String getTeam() { return mTeam; }
 	public String getApp() {
 		return mApp;
 	}

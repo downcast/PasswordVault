@@ -12,10 +12,11 @@ public class Department {
 
 	public Department(){}
 
-	public Department(String name, String users, String servers){
+	public Department(String name, String users, String servers, String id){
 		this.mName = name;
 		this.mUsers = users;
 		this.mServers = servers;
+		this.mID = id;
 	}
 
 	//region setters

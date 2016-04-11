@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.appdomain.passwordvault.LocalModel.ApplicationData;
-import com.appdomain.passwordvault.LocalModel.Team;
 import com.appdomain.passwordvault.MainActivity;
 import com.appdomain.passwordvault.R;
 
@@ -43,7 +41,7 @@ public class FragmentTeamAdd extends Fragment implements View.OnClickListener{
 
 				String name = mName.getText().toString();
 
-				ApplicationData.getInstance().addTeam(new Team(name, null, null, null));
+				//ApplicationData.getInstance().addTeam(new Team(name, null, null, null));
 				MainActivity.nextFragment(this, new FragmentPanelAdmin(), null, false, false);
 				break;
 		}

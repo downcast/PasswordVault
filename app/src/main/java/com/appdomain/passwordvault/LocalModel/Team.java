@@ -13,11 +13,12 @@ public class Team {
 
 	public Team(){}
 
-	public Team(String name, String users, String servers, String department){
+	public Team(String name, String users, String servers, String department, String id){
 		this.mName = name;
 		this.mUsers = users;
 		this.mServers = servers;
 		this.mDepartments = department;
+		this.mID = id;
 	}
 
 	//region setters
